@@ -10,4 +10,8 @@ class SecretSanta
     @list.push(elf)
   end
 
+  def choose_recipient
+    @list.sample
+  end
+
 end
