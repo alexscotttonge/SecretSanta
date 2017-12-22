@@ -6,12 +6,8 @@ class SecretSanta
     @list = []
   end
 
-  def add_participant(elf)
-    @list.push(elf)
-  end
-
-  def choose_recipient
-    @list.sample
+  def add_participant(name)
+    @list.push(name)
   end
 
 end
