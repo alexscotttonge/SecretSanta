@@ -12,7 +12,8 @@ describe SecretSanta do
   it 'picks pairs of participants from the list' do
     secret_santa.add_participant('jim')
     secret_santa.add_participant('ed')
-    expect(secret_santa.choose_pairs).to eq(['ed', 'jim'])
+    secret_santa.choose_pairs
+    expect(secret_santa.santa_pairs).to include(['jim','ed'])
   end
 
 end
