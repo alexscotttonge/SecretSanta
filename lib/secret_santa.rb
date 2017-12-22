@@ -15,7 +15,10 @@ class SecretSanta
     list.each do |secret_santa|
       index = (rand * list.length).to_i
       recipient = list[index]
-      santa_pairs << [secret_santa, recipient]
+      unless recipient == secret_santa
+        list.delete_at(index)
+        santa_pairs << [secret_santa, recipient]
+      end
     end
   end
 

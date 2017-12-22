@@ -13,7 +13,7 @@ describe SecretSanta do
     secret_santa.add_participant('jim')
     secret_santa.add_participant('ed')
     secret_santa.choose_pairs
-    expect(secret_santa.santa_pairs).to include(['jim','ed'])
+    expect(secret_santa.santa_pairs).to include(['jim', 'ed'])
   end
 
 end
