@@ -10,6 +10,12 @@ I want to be able to enter their names
 
 ```sh
 As an organizer
+So I can match people up
+I want to be able to select pairs from the list
+```
+
+```sh
+As an organizer
 So I can notify participants
 I want to be able to contact participants with details of their gift recipient
 ```
