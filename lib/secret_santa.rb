@@ -25,9 +25,15 @@ class SecretSanta
     end
   end
 
+  def headers
+    puts "Subject: Secret Santa"
+    puts "From: Santa, Lapland"
+  end
+
   def send_message
+    headers
     santa_pairs.each do |secret_santa, recipient|
-      puts "Secret Santa: #{secret_santa} => Recipient: #{recipient}"
+      puts "Hello #{secret_santa}, you are Secret Santa. Your recipient is #{recipient}. Please be generous."
     end
   end
 
