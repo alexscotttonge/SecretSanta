@@ -2,7 +2,19 @@ require 'secret_santa'
 
 describe SecretSanta do
 
-  let(:secret_santa) { described_class.new }
+  class MessageDouble
+
+    attr_reader :headers
+
+    def headers
+      puts "Subject: Secret Santa"
+      puts "From: Santa, Lapland"
+    end
+
+  end
+
+  let(:message) { MessageDouble.new }
+  let(:secret_santa) { described_class.new(message) }
 
   describe '#add_participant' do
     it 'adds a user to a list' do

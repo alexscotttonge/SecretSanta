@@ -1,10 +1,11 @@
 class SecretSanta
 
-  attr_reader :list, :santa_pairs
+  attr_reader :list, :santa_pairs, :message
 
-  def initialize
+  def initialize(message)
     @list = []
     @santa_pairs = []
+    @message = message
   end
 
   def add_participant(name)
@@ -25,13 +26,8 @@ class SecretSanta
     end
   end
 
-  def headers
-    puts "Subject: Secret Santa"
-    puts "From: Santa, Lapland"
-  end
-
   def send_message
-    headers
+    message.headers
     santa_pairs.each do |secret_santa, recipient|
       puts "Hello #{secret_santa}, you are Secret Santa. Your recipient is #{recipient}. Please be generous."
     end
