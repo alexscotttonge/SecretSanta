@@ -17,7 +17,10 @@ describe SecretSanta do
   end
 
   it 'sends a message to each pair' do
-    expect(secret_santa.send_message).to eq 'A message from Santa'
+    secret_santa.add_participant('jim')
+    secret_santa.add_participant('ed')
+    secret_santa.choose_pairs
+    expect{ secret_santa.send_message }.to output("Secret Santa: jim => Recipient: ed\n").to_stdout
   end
 
 end

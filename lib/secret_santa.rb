@@ -26,7 +26,9 @@ class SecretSanta
   end
 
   def send_message
-    'A message from Santa'
+    santa_pairs.each do |secret_santa, recipient|
+      puts "Secret Santa: #{secret_santa} => Recipient: #{recipient}"
+    end
   end
 
 end
