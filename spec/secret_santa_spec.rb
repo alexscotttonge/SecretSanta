@@ -29,11 +29,4 @@ describe SecretSanta do
     end
   end
 
-  describe '#headers' do
-    it 'prints headers' do
-      expect { secret_santa.headers}.to output("Subject: Secret Santa\nFrom: Santa, Lapland\n").to_stdout
-    end
-  end
-
-
 end
