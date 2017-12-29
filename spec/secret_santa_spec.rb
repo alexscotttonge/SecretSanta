@@ -16,4 +16,8 @@ describe SecretSanta do
     expect(secret_santa.santa_pairs).to include(['jim', 'ed'])
   end
 
+  it 'sends a message to each pair' do
+    expect(secret_santa.send_message).to eq 'A message from Santa'
+  end
+
 end

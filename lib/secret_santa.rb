@@ -25,4 +25,8 @@ class SecretSanta
     end
   end
 
+  def send_message
+    'A message from Santa'
+  end
+
 end
