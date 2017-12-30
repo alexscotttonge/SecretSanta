@@ -42,4 +42,10 @@ class SecretSanta
     spending_allowance = BUDGET_CONST * number_of_pairs
   end
 
+  def update
+    santa_pairs.each do |each_pair|
+      puts "Ho,ho,ho. Please be advised, Secret Santa present time starts at 6pm tomorrow"
+    end
+  end
+
 end
