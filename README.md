@@ -1,6 +1,27 @@
 # Secret Santa
 A technical challenge based around Secret Santa. The description below is an MVP.
 
+## Technologies
+- Ruby
+- RSpec - testing
+
+## Usage
+```sh
+$ git clone git@github.com:alexscotttonge/SecretSanta
+$ cd SecretSanta
+$ irb
+```
+
+## Functionality
+```sh
+```
+
+## Run Tests
+```sh
+$ rspec
+```
+
+## User Stories
 
 ```sh
 As an organizer
