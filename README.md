@@ -26,7 +26,8 @@ So I know who I am getting a gift for
 I want to receive a message with these details
 ```
 
-## V1 MVP
-- Organizer should be able to enter your friends details
-- Organizer should be able to contact a participant with the details of their secret santa gift recipient
-- Participants should get a message with their secret santa details
+```sh
+As an organizer
+So I can control spending
+I want to set a total budget
+```
