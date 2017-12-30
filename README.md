@@ -31,3 +31,9 @@ As an organizer
 So I can control spending
 I want to set a total budget
 ```
+
+```sh
+As an organizer
+So I can coordinate the participants
+I want to be able to send everyone a message
+```
