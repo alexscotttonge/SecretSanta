@@ -1,4 +1,8 @@
+require_relative 'message'
+
 class SecretSanta
+
+  BUDGET_CONST = 10
 
   attr_reader :list, :santa_pairs, :message
 
@@ -31,6 +35,11 @@ class SecretSanta
     santa_pairs.each do |secret_santa, recipient|
       puts "Hello #{secret_santa}, you are Secret Santa. Your recipient is #{recipient}. Please be generous."
     end
+  end
+
+  def budget
+    number_of_pairs = santa_pairs.length
+    spending_allowance = BUDGET_CONST * number_of_pairs
   end
 
 end

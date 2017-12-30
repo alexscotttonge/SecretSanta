@@ -41,4 +41,13 @@ describe SecretSanta do
     end
   end
 
+  describe '#budget' do
+    it 'sets the budget per pair' do
+      secret_santa.add_participant('jim')
+      secret_santa.add_participant('ed')
+      secret_santa.choose_pairs
+      expect(secret_santa.budget).to eq 10
+    end
+  end
+
 end
