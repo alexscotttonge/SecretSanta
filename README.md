@@ -13,7 +13,31 @@ $ irb
 ```
 
 ## Functionality
-```sh
+```
+2.4.0 :002 > secret_santa = SecretSanta.new(Message.new)
+ => #<SecretSanta:0x007ff7911389a0 @list=[], @santa_pairs=[], @message=#<Message:0x007ff7911389c8>> 
+2.4.0 :003 > secret_santa.add_participant('Emily')
+ => ["Emily"] 
+2.4.0 :004 > secret_santa.add_participant('Sarah')
+ => ["Emily", "Sarah"] 
+2.4.0 :005 > secret_santa.add_participant('Claire')
+ => ["Emily", "Sarah", "Claire"] 
+2.4.0 :006 > secret_santa.add_participant('Ella')
+ => ["Emily", "Sarah", "Claire", "Ella"] 
+2.4.0 :007 > secret_santa.choose_pairs
+ => ["Emily", "Sarah"] 
+2.4.0 :008 > secret_santa.santa_pairs
+ => [["Emily", "Claire"], ["Sarah", "Ella"]] 
+2.4.0 :009 > secret_santa.send_message
+Subject: Secret Santa
+From: Santa, Lapland
+Hello Emily, you are Secret Santa. Your recipient is Claire. Please be generous.
+Hello Sarah, you are Secret Santa. Your recipient is Ella. Please be generous.
+ => [["Emily", "Claire"], ["Sarah", "Ella"]] 
+2.4.0 :010 > secret_santa.update
+Ho,ho,ho. Please be advised, Secret Santa present time starts at 6pm tomorrow
+Ho,ho,ho. Please be advised, Secret Santa present time starts at 6pm tomorrow
+ => [["Emily", "Claire"], ["Sarah", "Ella"]] 
 ```
 
 ## Run Tests
